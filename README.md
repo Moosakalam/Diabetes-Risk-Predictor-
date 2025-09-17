@@ -28,14 +28,11 @@ Streamlit: For building and serving the interactive web application.
 Follow these steps to set up and run the project on your local machine.
 
 1. Clone the Repository
-Bash
-
-git clone https://github.com/your-username/diabetes-predictor.git
+git clone [https://github.com/your-username/diabetes-predictor.git](https://github.com/your-username/diabetes-predictor.git)
 cd diabetes-predictor
+
 2. Create a Virtual Environment
 It's highly recommended to create a virtual environment to manage project dependencies.
-
-Bash
 
 # For macOS/Linux
 python3 -m venv venv
@@ -44,27 +41,28 @@ source venv/bin/activate
 # For Windows
 python -m venv venv
 venv\Scripts\activate
+
 3. Install Required Libraries
 The requirements.txt file contains all the necessary Python libraries.
 
-Bash
-
 pip install -r requirements.txt
+
 Note: If you don't have a requirements.txt file, you can create one from your training environment by running: pip freeze > requirements.txt
 
 4. Run the Streamlit App
 Once the dependencies are installed, you can run the application.
 
-Bash
-
 streamlit run app.py
+
 The application will open in your web browser, ready to make predictions!
 
 📂 File Structure
+.
 ├── app.py             # The main Streamlit application script
 ├── model.pkl          # The serialized trained model
 ├── scaler.pkl         # The serialized fitted scaler
 ├── requirements.txt   # Project dependencies
 └── README.md          # This file
+
 💡 Important Note on Model Versions
 The model.pkl and scaler.pkl files were saved using a specific version of scikit-learn. If you encounter an InconsistentVersionWarning, the most reliable solution is to retrain the model in your current environment by running your training script. This will generate new .pkl files that are perfectly compatible with your library versions.
